@@ -1,0 +1,15 @@
+  638  grep -w "3822817341" ../amazon_reviews_us_Books_v1_02.tsv
+  639  grep -w "3822817341" ../amazon_reviews_us_Books_v1_02.tsv | cut -f 14
+  640  grep -w "3822817341" ../amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > reviews.tmp
+  641  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g'
+  642  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g' | sed 's/[ ]+/ /g'
+  643  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g' | tr -s ' '
+  644  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g'
+  645  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g' | tr -s ' '
+  646  history > cmds.log
+  647  sed 's/[,.;]//g' reviews.tmp | sed 's/\band\b//g' | sed 's/\bor\b//g' | sed 's/\bif\b//g' | sed 's/\bin\b//g' | sed 's/\bit\b//gI' | sed 's/<[a-z]\+ \/>/ /g' | sed 's/&quot/ /g' | sed 's/\\//g' | tr -s ' ' > trimmed_review_body.txt
+  648  history > cmds.log
+  649  tail -n 11 history > cmds.log
+  650  history | tail -n 11 > cmds.log
+  651  history | tail -n 12 > cmds.log
+  652  history | tail -n 15 > cmds.log
